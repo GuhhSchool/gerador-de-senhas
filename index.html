@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Display -->
+    <title>Gerador de Senhas</title>
+
+    <!-- Link -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/unlock.svg">
+</head>
+<body>
+    <!-- Sessão do conteúdo -->
+    <section class="section__conteudos">
+
+        <!-- Título -->
+        <div class="div__titulo">
+            <img src="./assets/unlock.svg" alt="cadeado fechado">
+            <h2 class="h2__titulo-principal">Gerador de senha</h2>
+            <h3 class="h3__titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
+        </div>
+
+        <!-- Inserir Senha -->
+        <div class="div__senha">
+            <div>
+                <label for="input__inserir-senha">Senha</label>
+                <input name="senha" id="input__inserir-senha" type="text" readonly>
+            </div>
+            
+
+            <img class="img__restart" src="./assets/restart-svgrepo-com.svg">
+        </div>
+        
+        <!-- Personalizar senha -->
+        <div class="div__personalizar">
+            <h3 class="h3__personalizar-titulo">Personalize sua senha</h3>
+
+            <div class="div__personalizar-colunas">
+                <!-- Coluna 1 -->
+                <div class="div__coluna">
+                    <h4 class="h4__titulo1-limite-de-caracteres">Número de caracteres</h4>
+                    
+                    <!-- Botões -->
+                    <div class="div__buttons">
+                        <button class="button__caracteres">-</button>
+                        <p class="p__caracteres">12</p>
+                        <button class="button__caracteres">+</button>
+                    </div>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div class="div__coluna">
+                    <h4 class="h4__titulo2-caracteristicas">Características da senha</h4>
+                
+                    <!-- CheckBox -->
+                    <div class="div__checkboxs">
+                        <div class="div__checkbox">
+                            <input id="maiusculo" class="input__checkbox" type="checkbox" checked>
+                            <label for="maiusculo">Letras Maiúsculas</label>
+                        </div>
+
+                        <div class="div__checkbox">
+                            <input id="minusculo" class="input__checkbox" type="checkbox">
+                            <label for="minusculo">Letras Minúsculas</label>
+                        </div>
+
+                        <div class="div__checkbox">
+                            <input id="numeros" class="input__checkbox" type="checkbox">
+                            <label for="numeros">Números</label>
+                        </div>
+
+                        <div class="div__checkbox">
+                            <input id="simbolos" class="input__checkbox" type="checkbox">
+                            <label for="simbolos">Símbolos</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 3 -->
+                <div class="div__coluna">
+                    <h4 class="h4__titulo3-forca-senha">Força da senha</h4>
+                
+                    <!-- Barra de força de senha -->
+                    <div class="div__barra-fundo"></div>
+                    <div class="div__barra div__fraca animation--div__barra"></div>
+
+                    <div class="div__textos-barras">
+                        <p>Fraca</p>
+                        <p>Média</p>
+                        <p>Forte</p>
+                    </div>
+                </div>
+            </div>
+            <p class="p__entropia">Entropia</p>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

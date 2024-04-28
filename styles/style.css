@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap');
+
+
+:root {
+    --cor-background: #00162E;
+    --cor-texto-principal: white;
+    --cor-background-senha: #00244D;
+    --cor-background-personalizar: #001E40;
+    --cor-borda-personalizar: #0075FF;
+    --cor-senha-fraca: #E71B32;
+    --cor-senha-media: #FAF408;
+    --cor-senha-forte: #00FF85;
+    --fonte-roboto: "Roboto", sans-serif;
+    --fonte-roboto-mono: "Roboto Mono", monospace;
+}
+
+* {
+    font-weight: 400;
+}
+
+body {
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-background);
+    font-family: var(--fonte-roboto);
+}
+
+.section__conteudos {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.div__titulo {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.h2__titulo-principal {
+    font-family: var(--fonte-roboto-mono);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.h3__titulo-secundario {
+    font-size: 24px;
+}
+
+.div__senha {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 6px solid var(--cor-borda-personalizar);
+    background-color: var(--cor-background-senha);
+    padding: 24px;
+    margin-top: 80px;
+}
+
+#input__inserir-senha {
+    align-self: center;
+    background-color: var(--cor-background-senha);
+    color: var(--cor-texto-principal);
+    border: none;
+    font-family: var(--fonte-roboto-mono);
+    font-size: 40px;
+    width: 70%;
+}
+
+#input__inserir-senha:focus {
+    outline: none;
+}
+
+.img__restart {
+    width: 7%;
+    background-color: var(--cor-background-senha);
+    border: none;
+    align-self: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.img__restart:hover {
+    transform: rotate(45deg);
+}
+
+.div__personalizar {
+    background-color: var(--cor-background-personalizar);
+    border: 2px solid var(--cor-borda-personalizar);
+    margin-top: 22px;
+    padding: 24px;
+}
+
+.h3__personalizar-titulo {
+    font-family: var(--fonte-roboto);
+    font-size: 28px;
+}
+
+.div__personalizar-colunas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div__coluna {
+    font-size: 24px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--cor-borda-personalizar);
+    padding-bottom: 40px;
+}
+
+.div__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button__caracteres {
+    background-color: var(--cor-background-personalizar);
+    color: var(--cor-texto-principal);
+    border: 2px solid var(--cor-borda-personalizar);
+    padding: 24px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button__caracteres:hover {
+    background-color: var(--cor-borda-personalizar);
+}
+
+.p__caracteres {
+    margin: 0;
+    padding: 24px;
+    border-top: 2px solid var(--cor-borda-personalizar);
+    border-bottom: 2px solid var(--cor-borda-personalizar);
+    cursor: default;
+    font-size: 24px;
+}
+
+.div__checkboxs {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.div__checkbox label {
+    font-size: 24px;
+}
+
+.div__checkbox input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.div__barra-fundo {
+    background-color: var(--cor-background-senha);
+    height: 40px;
+    width: 100%;
+    margin: 0;
+}
+
+.div__barra {
+    height: 40px;
+    position: relative;
+    bottom: 40px;
+}
+.div__fraca {
+    width: 30%;
+    background-color: var(--cor-senha-fraca);
+}
+
+.div__media {
+    width: 50%;
+    background-color: var(--cor-senha-media);
+}
+
+.div__forte {
+    width: 100%;
+    background-color: var(--cor-senha-forte);
+}
+
+.animation--div__barra {
+    transition: width 0.5s, background-color 0.5s;
+}
+
+.div__textos-barras {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number {
+    color: var(--cor-senha-media);
+}
+
+.p__entropia {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {   
+    .div__personalizar-colunas {
+        flex-direction: row;
+    }
+
+    .div__coluna {
+        border-bottom: none;
+        border-right: 1px solid var(--cor-borda-personalizar);
+        padding-left: 2%;
+    }
+
+    .div__coluna:last-child {
+        border: none;
+    }
+}

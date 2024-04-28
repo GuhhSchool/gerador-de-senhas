@@ -28,11 +28,13 @@ body {
 .section__conteudos {
     max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .div__titulo {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .h2__titulo-principal {
@@ -54,7 +56,11 @@ body {
     border-bottom: 6px solid var(--cor-borda-personalizar);
     background-color: var(--cor-background-senha);
     padding: 24px;
-    margin-top: 80px;
+    margin-top: 30px;
+}
+
+.div__input-area {
+    width: 100%;
 }
 
 #input__inserir-senha {
@@ -64,7 +70,7 @@ body {
     border: none;
     font-family: var(--fonte-roboto-mono);
     font-size: 40px;
-    width: 70%;
+    width: 90%;
 }
 
 #input__inserir-senha:focus {
@@ -196,6 +202,10 @@ body {
 
 .p__entropia {
     font-size: 18px;
+}
+
+#p__copyright {
+    align-self: center;
 }
 
 @media screen and (min-width: 768px) {   
